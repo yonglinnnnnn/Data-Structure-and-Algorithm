@@ -1,3 +1,8 @@
+# Name: Xu Yong Lin
+# Admin no: 212033J
+# Tutorial group: IT2153-01
+
+
 # the storage class for creating the linekd list nodes
 class QueueNode:
     def __init__(self, item):

@@ -1,4 +1,10 @@
+# Name: Xu Yong Lin
+# Admin no: 212033J
+# Tutorial group: IT2153-01
+
+
 from Qn1 import Stack
+
 # enhancement: handle errors: modular operator.
 # enhancement: handle divide/multiple by 0
 # enhancement: change it to prefix
@@ -9,14 +15,15 @@ print('To quit, type \"quit\" or \"q\"')
 
 while True:
     expression = input("\nEnter a Postfix expression to be evaluated: ")
-    tokens = expression.split(" ") # Split the expression into individual tokens
+    tokens = expression.split(" ")  # Split the expression into individual tokens
 
     # separated by space
-    myStack = Stack()      # Create an instance of the Stack object
+    myStack = Stack()  # Create an instance of the Stack object
 
     # Handle help option
     if tokens[0] == "help" or tokens[0] == "?":
-        print('Postfix Expression Evaluator takes in a mathematical expression expressed in Postfix notation and evaluates it.')
+        print(
+            'Postfix Expression Evaluator takes in a mathematical expression expressed in Postfix notation and evaluates it.')
         print('Example: \"1 2 + 4 *\" will evaluate to \"12\"')
     # Handle quit option
     elif tokens[0] == "quit" or tokens[0] == "q":
@@ -97,7 +104,6 @@ while True:
             print('Evaluation Result: ', myStack.pop())
         else:
             print('Invalid Postfix expression!')
-
 
 # if __name__ == '__main__':
 # #     test code for your stack implementation

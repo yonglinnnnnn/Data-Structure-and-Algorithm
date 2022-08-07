@@ -1,6 +1,6 @@
-# Xu Yong Lin
-# 212033J
-# IT2153 - 01
+# Name: Xu Yong Lin
+# Admin no: 212033J
+# Tutorial group: IT2153-01
 
 
 # The storage class for creating linked list nodes

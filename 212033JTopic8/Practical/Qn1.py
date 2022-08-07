@@ -1,6 +1,6 @@
-# Xu Yong Lin
-# 212033J
-# IT2153 - 01
+# Name: Xu Yong Lin
+# Admin no: 212033J
+# Tutorial group: IT2153-01
 
 class Stack:
     def __init__(self):
@@ -43,5 +43,3 @@ if __name__ == '__main__':
         while (myStack.isEmpty()) is False:
             print(myStack.peek())
             myStack.pop()
-
-

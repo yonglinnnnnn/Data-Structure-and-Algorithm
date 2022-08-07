@@ -1,6 +1,9 @@
+# Name: Xu Yong Lin
+# Admin no: 212033J
+# Tutorial group: IT2153-01
+
+
 # implement of the Queue ADT using Python list
-
-
 class Queue:
     # creates an empty list
     def __init__(self):

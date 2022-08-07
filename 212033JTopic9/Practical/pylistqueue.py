@@ -1,3 +1,8 @@
+# Name: Xu Yong Lin
+# Admin no: 212033J
+# Tutorial group: IT2153-01
+
+
 class Queue:
     # Creates an empty queue.
     def __init__(self):

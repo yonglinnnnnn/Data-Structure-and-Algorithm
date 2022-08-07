@@ -1,9 +1,9 @@
-# NAME: XU YONG LIN
-# ADMIN NO: 212033J
-# IT2154-01
+# Name: Xu Yong Lin
+# Admin no: 212033J
+# Tutorial group: IT2153-01
 
-import pylistqueue as queue
-import pyliststack as stack
+# import pylistqueue as queue
+# import pyliststack as stack
 
 def reverseQueue(Q):
     S = stack.Stack()

@@ -1,3 +1,8 @@
+# Name: Xu Yong Lin
+# Admin no: 212033J
+# Tutorial group: IT2153-01
+
+
 from Qn1 import Stack
 
 
