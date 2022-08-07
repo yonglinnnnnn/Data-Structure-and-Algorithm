@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./212033JTopic8/Practical"
+    ]
+}
