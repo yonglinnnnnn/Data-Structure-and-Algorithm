@@ -2,8 +2,7 @@
 # Admin no: 212033J
 # Tutorial group: IT2153-01
 
-
-from Qn1 import Stack
+import pyliststack as stack
 
 
 def transfer(S, T):
@@ -12,8 +11,8 @@ def transfer(S, T):
 
 
 # test code
-S = Stack()
-T = Stack()
+S = stack.Stack()
+T = stack.Stack()
 
 for i in range(10, 60, 10):
     S.push(i)
@@ -22,7 +21,7 @@ print('Before')
 print('S: ', S)
 print('T: ', T)
 
-transfer(S)
+transfer(S, T)
 
 print('After')
 print('S: ', S)

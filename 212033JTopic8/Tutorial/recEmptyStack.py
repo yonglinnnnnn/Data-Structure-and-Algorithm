@@ -2,11 +2,11 @@
 # Admin no: 212033J
 # Tutorial group: IT2153-01
 
-from Qn1 import Stack
+import pyliststack as stack
 
 
 def recEmptyStack(S):
-    if S.isempty():  # base case
+    if S.isEmpty():  # base case
         return S
     else:
         S.pop()
@@ -14,7 +14,7 @@ def recEmptyStack(S):
 
 
 # test code
-S = Stack()
+S = stack.Stack()
 
 for i in range(10, 60, 10):
     S.push(i)

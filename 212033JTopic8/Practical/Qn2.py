@@ -2,16 +2,11 @@
 # Admin no: 212033J
 # Tutorial group: IT2153-01
 
+# this file consist of 2 enhancement:
+# 1. account for modular operator
+# 2. handle 0 for division and modular
 
 from Qn1 import Stack
-
-# enhancement: handle errors: modular operator.
-# enhancement: handle divide/multiple by 0
-# enhancement: change it to prefix
-
-print('Postfix Expression Evaluator')
-print('For help, type \"help\" or \"?\"')
-print('To quit, type \"quit\" or \"q\"')
 
 while True:
     expression = input("\nEnter a Postfix expression to be evaluated: ")
@@ -68,7 +63,13 @@ while True:
             elif item == '/':
                 if len(myStack) > 1:
                     temp = myStack.pop()
-                    myStack.push(myStack.pop() / temp)
+                    # enhancement: handle 0 for division
+                    if temp > 0 or temp < 0:
+                        myStack.push(myStack.pop() / temp)
+                    else:
+                        print('Numbers cannot be divided by zero!')
+                        valid = False
+                        break
                 else:
                     valid = False
                     break
@@ -85,7 +86,12 @@ while True:
             elif item == '%':
                 if len(myStack) > 1:
                     temp = myStack.pop()
-                    myStack.push(myStack.pop() % temp)
+                    if temp > 0 or temp < 0:
+                        myStack.push(myStack.pop() % temp)
+                    else:
+                        print('Numbers cannot be modulo by zero!')
+                        valid = False
+                        break
                 else:
                     valid = False
                     break
@@ -105,6 +111,3 @@ while True:
         else:
             print('Invalid Postfix expression!')
 
-# if __name__ == '__main__':
-# #     test code for your stack implementation
-#
