@@ -2,13 +2,13 @@
 # Admin no: 212033J
 # Tutorial group: IT2153-01
 
-import pylistqueue as queue
-
+# enhancement: expanding the queue via multiplying the maxSize by 2
 
 # Implementation of the Queue ADT using a circular array.
 class Queue:
     # Creates an empty queue.
     def __init__(self, maxSize):
+        self._limit = maxSize
         self._count = 0
         self._front = 0
         self._back = maxSize - 1
@@ -25,8 +25,23 @@ class Queue:
     def __len__(self):
         return self._count
 
+    # enhancement: expanding the array
+    def resize(self):
+        # doubling the size of the array
+        new_q = [None] * (self._limit * 2)
+        old_q = self._qArray
+        for i in range(len(old_q)):
+            new_q[i] = old_q[i]
+        # doubling the size of the array
+        self._limit = self._limit * 2
+        self._qArray = new_q
+
     def enqueue(self, item):
-        assert not self.isFull(), "Cannot enqueue to a full queue."
+        # enhancement: expanding the circular array if full
+        if self._count == self._limit:
+            print("Cannot enqueue to a full queue. Expanding array now!")
+            Queue.resize(self)
+
         maxSize = len(self._qArray)
         self._back = (self._back + 1) % maxSize
         self._qArray[self._back] = item
@@ -42,7 +57,7 @@ class Queue:
         return item
         # Return the content of the queue (with array index in square
 
-    # brackets].
+    # brackets[].
     def __str__(self):
         maxSize = len(self._qArray)
         outStr = ''
@@ -60,6 +75,14 @@ q.enqueue(30)
 q.enqueue(40)
 q.enqueue(50)
 
+# more data inputs to implement enhancement code
+q.enqueue(60)
+q.enqueue(70)
+q.enqueue(80)
+q.enqueue(90)
+q.enqueue(100)
+q.enqueue(110)
+
 print(q)
 
 q.dequeue()
@@ -71,10 +94,4 @@ q.enqueue(60)
 q.enqueue(70)
 print(q)
 
-# test code
-myQueue = queue.Queue()
-for i in range(10, 60, 10):
-    myQueue.enqueue(i)
 
-print('The contents of the queue (BEFORE REVERSING): ')
-print(myQueue)
