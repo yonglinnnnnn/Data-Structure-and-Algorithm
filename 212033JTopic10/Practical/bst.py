@@ -7,8 +7,6 @@ import pylistqueue as queue
 
 
 # the storage class for creating binary tree nodes
-
-
 class Node:
     def __init__(self, data):
         self.data = data
