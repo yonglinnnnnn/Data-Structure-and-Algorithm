@@ -2,7 +2,9 @@
 # Admin no: 212033J
 # Tutorial group: IT2153-01
 
+# class for doing encryption and decryption using a Caesar cipher
 class CaesarCipher:
+    # construct Caesar cipher using given integer shift for rotation
     def __init__(self, shift):
         encoder = [None] * 26  # temp array for encryption
         decoder = [None] * 26  # temp array for decryption
@@ -15,11 +17,11 @@ class CaesarCipher:
         self._forward = ''.join(encoder)  # convert the encoder and
         self._backward = ''.join(decoder)  # decoder arrays as strings
 
-    # return stirng representing encrypted message
+    # return string representing encrypted message
     def encrypt(self, message):
         return self._transform(message, self._forward)
 
-    # return decrupted message given encrypted secret
+    # return decrypted message given encrypted secret
     def decrypt(self, secret):
         return self._transform(secret, self._backward)
 

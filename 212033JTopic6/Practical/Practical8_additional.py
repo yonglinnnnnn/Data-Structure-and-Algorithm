@@ -3,6 +3,7 @@
 # Tutorial group: IT2153-01
 
 # additional function: set pivot as the median value
+# function returns pivot element + location of the pivot
 def median(L, low, high):
     mid = (low + high - 1) // 2
     a = L[low]
@@ -33,7 +34,7 @@ def median(L, low, high):
 #  sorts a python list in ascending order using the quick sort algo
 def quickSort(theList):
     n = len(theList)
-    recQuickSort(theList, 0, n - 1)
+    recQuickSort(theList, 0, n)
 
 
 def recQuickSort(theList, first, last):
@@ -44,6 +45,7 @@ def recQuickSort(theList, first, last):
     else:
         # partition the list and obtain the pivot position
         pos, result = partitionSeq(theList, first, last)
+        # print(f'pivot index is: {pos}')
 
         # repeat the process on the two sublists
         result += recQuickSort(theList, first, pos)
@@ -52,10 +54,15 @@ def recQuickSort(theList, first, last):
 
 
 def partitionSeq(theList, first, last):
-    # save a copy of the pivot value
     result = 0
+
+    # save a copy of the pivot value
+    # pivot: pivot element, pidx: index of pivot
     pivot, pidx = median(theList, first, last)
-    print(f'pivot: {pivot}, pidx: {pidx}')
+
+    # print(f'pivot: {pivot}, pidx: {pidx}')
+
+    # move the pivot to the front of the list
     theList[first], theList[pidx] = theList[pidx], theList[first]
     i = first + 1
 
