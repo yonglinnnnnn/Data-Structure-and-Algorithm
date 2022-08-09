@@ -81,6 +81,9 @@ q.enqueue(70)
 q.enqueue(80)
 q.enqueue(90)
 q.enqueue(100)
+
+print(q)
+
 q.enqueue(110)
 
 print(q)

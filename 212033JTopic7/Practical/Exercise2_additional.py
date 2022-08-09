@@ -28,7 +28,6 @@ class CaesarCipher:
 
     # utility to perform transformation based on given code string
     def _transform(self, original, code):
-        print('code:', code)
         msg = list(original)  # convert msg into a list of characters
 
         # additional: able to handle both capital and small caps letters
