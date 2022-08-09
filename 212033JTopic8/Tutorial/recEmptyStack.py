@@ -20,9 +20,9 @@ for i in range(10, 60, 10):
     S.push(i)
 
 print('Before')
-print('S: ', S)
+print('S: ', S._theItems)
 
 recEmptyStack(S)
 
 print('After')
-print('S: ', S)
+print('S: ', S._theItems)
