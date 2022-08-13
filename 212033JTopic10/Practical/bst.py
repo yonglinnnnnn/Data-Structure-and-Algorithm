@@ -2,6 +2,7 @@
 # Admin no: 212033J
 # Tutorial group: IT2153-01
 
+# enhancement: print out binary tree
 
 import pylistqueue as queue
 
@@ -108,6 +109,17 @@ class BinarySearchTree:
                 myQueue.enqueue(node.right)
 
 
+def print2DTree(root, space=0, LEVEL_SPACE=5):
+    if (root == None): return
+    space += LEVEL_SPACE
+    print2DTree(root.right, space)
+    # print() # neighbor space
+    for i in range(LEVEL_SPACE, space):
+        print(end=" ")
+    print("|" + str(root.data) + "|<")
+    print2DTree(root.left, space)
+
+
 # test code
 if __name__ == '__main__':
     bst = BinarySearchTree()
@@ -115,15 +127,17 @@ if __name__ == '__main__':
     bst.insertNode(Node(60))
     bst.insertNode(Node(12))
     bst.insertNode(Node(90))
+    bst.insertNode(Node(85))
     bst.insertNode(Node(4))
     bst.insertNode(Node(41))
-    bst.insertNode(Node(1))
-    bst.insertNode(Node(100))
     bst.insertNode(Node(71))
+    bst.insertNode(Node(100))
+    bst.insertNode(Node(1))
+    bst.insertNode(Node(2))
     bst.insertNode(Node(29))
-    bst.insertNode(Node(37))
     bst.insertNode(Node(84))
     bst.insertNode(Node(23))
+    bst.insertNode(Node(37))
 
     print(f'Size of BST: {len(bst)}')
 
@@ -146,3 +160,7 @@ if __name__ == '__main__':
     print('\n\nBreadth-first Traversal of BST: ')
     print('==============================')
     bst.breadthfirstTrav()
+
+    print('\n\n')
+
+    print2DTree(bst._root)
