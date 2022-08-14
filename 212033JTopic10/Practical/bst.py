@@ -62,32 +62,34 @@ class BinarySearchTree:
             self._recPreorderTrav(subtree.left)
             self._recPreorderTrav(subtree.right)
 
-    # in-order traversal of BST
+        # In-order traversal of the BST
+
     def inorderTrav(self):
         if self._root is None:
-            print("Tree is empty")
+            print("tree is empty!")
         else:
             self._recInorderTrav(self._root)
 
-    # helper method to perform in-order traversal of the given subtree recursively
+    # Helper method to perform In-order Traversal of the given subtree recursively
     def _recInorderTrav(self, subtree):
         if subtree is not None:
-            self._recPreorderTrav(subtree.left)
+            self._recInorderTrav(subtree.left)
             print(subtree.data, end=" ")
-            self._recPreorderTrav(subtree.right)
+            self._recInorderTrav(subtree.right)
 
-    # post-order traversal of the BST
+    # Post-order traversal of the BST
     def postorderTrav(self):
         if self._root is None:
-            print("Tree is empty")
+            print("Tree is empty!")
         else:
             self._recPostorderTrav(self._root)
 
-    # helper method to perform post-order traversal of the given subtree recursively
+    # Helper method to perform Post-order Traversal of the given subtree
+    # recursively
     def _recPostorderTrav(self, subtree):
         if subtree is not None:
-            self._recPreorderTrav(subtree.left)
-            self._recPreorderTrav(subtree.right)
+            self._recPostorderTrav(subtree.left)
+            self._recPostorderTrav(subtree.right)
             print(subtree.data, end=" ")
 
     # breadth-first traversal of BST
@@ -127,17 +129,15 @@ if __name__ == '__main__':
     bst.insertNode(Node(60))
     bst.insertNode(Node(12))
     bst.insertNode(Node(90))
-    bst.insertNode(Node(85))
     bst.insertNode(Node(4))
     bst.insertNode(Node(41))
-    bst.insertNode(Node(71))
-    bst.insertNode(Node(100))
     bst.insertNode(Node(1))
-    bst.insertNode(Node(2))
+    bst.insertNode(Node(100))
+    bst.insertNode(Node(71))
     bst.insertNode(Node(29))
+    bst.insertNode(Node(37))
     bst.insertNode(Node(84))
     bst.insertNode(Node(23))
-    bst.insertNode(Node(37))
 
     print(f'Size of BST: {len(bst)}')
 
