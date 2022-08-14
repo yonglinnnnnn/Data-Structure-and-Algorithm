@@ -2,10 +2,10 @@
 # Admin no: 212033J
 # Tutorial group: IT2153-01
 
-# this file consist of 1 (+ 2 from the Qn2.py) enhancement:
+# this file consist of 1 (+ 2 from the postfixeval.py) enhancement:
 # 1. handle all the operations IN PREFIX FORM
 
-from Qn1 import Stack
+from pyliststack import Stack
 
 while True:
     expression = input("\nEnter a Postfix expression to be evaluated: ")

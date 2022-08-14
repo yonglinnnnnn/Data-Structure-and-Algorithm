@@ -6,7 +6,7 @@
 # 1. account for modular operator
 # 2. handle 0 for division and modular
 
-from Qn1 import Stack
+from pyliststack import Stack
 
 while True:
     expression = input("\nEnter a Postfix expression to be evaluated: ")
