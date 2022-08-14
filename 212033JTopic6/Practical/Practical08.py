@@ -2,7 +2,7 @@
 # Admin no: 212033J
 # Tutorial group: IT2153-01
 
-# additional function: set pivot as the median value
+# enhancement: set pivot as the median value
 
 # quick sort
 #  sorts a python list in ascending order using the quick sort algo
@@ -19,7 +19,7 @@ def recQuickSort(theList, first, last):
     else:
         # partition the list and obtain the pivot position
         pos = partitionSeq(theList, first, last)
-        print(f'pivot index is: {pos}')
+        # print(f'pivot index is: {pos}')
 
         # repeat the process on the two sublists
         recQuickSort(theList, first, pos - 1)
@@ -30,9 +30,9 @@ def partitionSeq(theList, first, last):
     # save a copy of the pivot value
     pivot = theList[first]
 
-    print(f'partitionSeq this list: {theList}')
-    print(f'first = {first}    &      last = {last}')
-    print(f'pivot is {pivot}')
+    # print(f'partitionSeq this list: {theList}')
+    # print(f'first = {first}    &      last = {last}')
+    # print(f'pivot is {pivot}')
 
     # find the pivot position and move the elements around it
     left = first + 1  # will scan leftward

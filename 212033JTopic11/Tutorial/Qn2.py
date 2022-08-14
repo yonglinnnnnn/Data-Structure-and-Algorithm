@@ -2,7 +2,7 @@
 # Admin no: 212033J
 # Tutorial group: IT2153-01
 
-# concatenate 2 lsits, L and M, given the first node of each list
+# concatenate 2 lists, L and M, given the first node of each list
 # assuming L and M are not empty
 def concatTwoLists(firstNodeOfL, firstNodeOfM):
     # initialise curNode to first node of L

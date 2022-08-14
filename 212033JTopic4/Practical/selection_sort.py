@@ -27,13 +27,16 @@ def selectionSort(theSeq, sortOrder):
 
 
 # Test codes
+print('sorting in ascending order')
 list_of_numbers = [10, 51, 2, 18, 4, 31, 13, 5, 23, 64, 29]
 print('Input List:', list_of_numbers)
 
 # ascending
 selectionSort(list_of_numbers, "a")
-print('Sorted List:', list_of_numbers)
+print('Sorted List:', list_of_numbers, '\n')
 
 # descending
+print('sorting in descending order')
+print('Input List:', list_of_numbers)
 selectionSort(list_of_numbers, "d")
 print(f'Sorted descending list: {list_of_numbers}')

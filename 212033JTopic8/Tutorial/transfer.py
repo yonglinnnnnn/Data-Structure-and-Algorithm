@@ -18,11 +18,11 @@ for i in range(10, 60, 10):
     S.push(i)
 
 print('Before')
-print('S: ', S)
-print('T: ', T)
+print('S: ', S._theItems)
+print('T: ', T._theItems)
 
 transfer(S, T)
 
 print('After')
-print('S: ', S)
-print('T: ', T)
+print('S: ', S._theItems)
+print('T: ', T._theItems)
